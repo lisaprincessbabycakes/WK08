@@ -5,7 +5,7 @@ let mMask;
 
 function preload() {
   mImg = loadImage("../assets/arara.jpg");
-  mMask = loadImage("../assets/mask.png");
+  mMask = loadImage("../assets/star_mask.png");
 }
 
 function setup() {
@@ -13,7 +13,7 @@ function setup() {
   background(220);
 
   mImg.resize(600, 0);
-  mMask.resize(600, 0);
+  mMask.resize(120, 0);
 
   mImg.mask(mMask);
 

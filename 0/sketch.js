@@ -22,9 +22,11 @@ function setup() {
     let pixelIsRed = redVal > 2 * greenVal && redVal > 2 * blueVal && redVal > 20;
 
     if (!pixelIsRed) {
-      mImg.pixels[idx + 0] = 0;
-      mImg.pixels[idx + 1] = 0;
-      mImg.pixels[idx + 2] = 0;
+      let lVal = (redVal + greenVal + blueVal) /3; 
+      mImg.pixels[idx + 0] = blueVal;
+      mImg.pixels[idx + 1] = redVal;
+      mImg.pixels[idx + 2] = greenVal;
+      
     }
   }
   mImg.updatePixels();

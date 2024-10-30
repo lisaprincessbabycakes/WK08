@@ -21,11 +21,17 @@ function setup() {
     let redVal = mImg.pixels[idx + 0];
     let greenVal = mImg.pixels[idx + 1];
     let blueVal = mImg.pixels[idx + 2];
-    let alphaVal = mImg.pixels[idx + 3];
+    // let alphaVal = mImg.pixels[idx + 3];
+    
+    let alphaVal= map (y, 0, mImg.height, 255, 0); 
+    stroke(redVal, greenVal, blueVal, alphaVal);
+    if (x > mImg.width/4 && x < 0.75 * mImg.width);
+    point(x,y);
   }
+
   mImg.updatePixels();
 
-  image(mImg, 0, 0);
+  //image(mImg, 0, 0);
 }
 
 function draw() {}
